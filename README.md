@@ -43,6 +43,12 @@ Key design choices for the quantum layer include:
 
 ---
 
+## 👥 Team & Individual Contributions
+
+* **Sukesh**: Developed and implemented the PyTorch–PennyLane QAPINN and c-PINN codebase, conducted comparative performance analysis across multi-qubit circuit topology variants, and evaluated loss trajectories.
+* **Padmavathi A**: Researched Explainable AI (XAI) frameworks for hybrid quantum-classical networks, authored diagnostic scripts for gradient flow tracking and loss decoupling, and mapped spatial-temporal error fields.
+* **Shashank**: Conducted literature survey and background review, designed and executed Fast Fourier Transform (FFT) dynamic spectral analysis scripts, and analyzed high-wavenumber mode resolution.
+
 ## Summary of Key Findings
 * **Data Efficiency:** The classical PINN required a dense dataset of 25,600 collocation points to achieve an acceptable $L_2$ error. The QAPINN achieved comparable accuracy using only 2,500 uniformly distributed points, demonstrating vastly superior data efficiency.
 * **Parameter Reduction:** Placing the VQC as the third hidden layer drastically reduced the number of trainable parameters in that layer to just 563, accelerating run times and lowering the memory footprint.

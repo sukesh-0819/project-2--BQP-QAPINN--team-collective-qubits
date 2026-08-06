@@ -43,6 +43,15 @@ Key design choices for the quantum layer include:
 
 ---
 
+
+## Summary of Key Findings
+* **Data Efficiency:** The classical PINN required a dense dataset of 25,600 collocation points to achieve an acceptable $L_2$ error. The QAPINN achieved comparable accuracy using only 2,500 uniformly distributed points, demonstrating vastly superior data efficiency.
+* **Parameter Reduction:** Placing the VQC as the third hidden layer drastically reduced the number of trainable parameters in that layer to just 563, accelerating run times and lowering the memory footprint.
+* **Mitigation of Spectral Bias:** Spatial Fast Fourier Transform (FFT) analysis confirmed that classical DNNs struggle to capture high-frequency details. The QAPINN successfully resolves high-wavenumber components ($|k| > 10$) over time, driven by the expressive multi-frequency Hilbert-space mappings of the quantum angle embedding.
+* **Noise Reduction:** At the initial temporal state, the QAPINN exhibited a completely clean, noise-free high-frequency tail, avoiding the spurious high-wavenumber oscillations present in the classical baseline.
+
+---
+
 ## 👥 Team & Individual Contributions
 
 * **Sukesh**: Developed and implemented the core PyTorch–PennyLane hybrid network architecture, conducted comparative experimental benchmarking across circuit ansatzes and qubit configurations, and performed parameter and loss convergence analyses.
@@ -50,13 +59,6 @@ Key design choices for the quantum layer include:
 generated loss component decoupling and gradient flow visualizations.
 * **Shashank**: Conducted the initial literature survey and theoretical background review, designed and executed the Fast Fourier Transform (FFT)
 dynamic spectral analysis, and analyzed high-frequency mode capturing.
----
-## Summary of Key Findings
-* **Data Efficiency:** The classical PINN required a dense dataset of 25,600 collocation points to achieve an acceptable $L_2$ error. The QAPINN achieved comparable accuracy using only 2,500 uniformly distributed points, demonstrating vastly superior data efficiency.
-* **Parameter Reduction:** Placing the VQC as the third hidden layer drastically reduced the number of trainable parameters in that layer to just 563, accelerating run times and lowering the memory footprint.
-* **Mitigation of Spectral Bias:** Spatial Fast Fourier Transform (FFT) analysis confirmed that classical DNNs struggle to capture high-frequency details. The QAPINN successfully resolves high-wavenumber components ($|k| > 10$) over time, driven by the expressive multi-frequency Hilbert-space mappings of the quantum angle embedding.
-* **Noise Reduction:** At the initial temporal state, the QAPINN exhibited a completely clean, noise-free high-frequency tail, avoiding the spurious high-wavenumber oscillations present in the classical baseline.
-
 ---
 
 ## Reproducibility & Execution Instructions

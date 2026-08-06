@@ -45,9 +45,11 @@ Key design choices for the quantum layer include:
 
 ## 👥 Team & Individual Contributions
 
-* **Sukesh**: Developed and implemented the PyTorch–PennyLane QAPINN and c-PINN codebase, conducted comparative performance analysis across multi-qubit circuit topology variants, and evaluated loss trajectories.
-* **Padmavathi A**: Researched Explainable AI (XAI) frameworks for hybrid quantum-classical networks, authored diagnostic scripts for gradient flow tracking and loss decoupling, and mapped spatial-temporal error fields.
-* **Shashank**: Conducted literature survey and background review, designed and executed Fast Fourier Transform (FFT) dynamic spectral analysis scripts, and analyzed high-wavenumber mode resolution.
+* **Sukesh**: Developed and implemented the core PyTorch–PennyLane hybrid network architecture, conducted comparative experimental benchmarking across circuit ansatzes and qubit configurations, and performed parameter and loss convergence analyses.
+* **Padmavathi A**:  Researched Explainable AI (XAI) frameworks for hybrid quantum-classical networks, authored the diagnostic codebase, and
+generated loss component decoupling and gradient flow visualizations.
+* **Shashank**: Conducted the initial literature survey and theoretical background review, designed and executed the Fast Fourier Transform (FFT)
+dynamic spectral analysis, and analyzed high-frequency mode capturing.
 ---
 ## Summary of Key Findings
 * **Data Efficiency:** The classical PINN required a dense dataset of 25,600 collocation points to achieve an acceptable $L_2$ error. The QAPINN achieved comparable accuracy using only 2,500 uniformly distributed points, demonstrating vastly superior data efficiency.

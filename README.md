@@ -68,6 +68,7 @@ To replicate the results presented in our technical report, follow these steps:
 1. Clone this repository to your local machine or compute node.
 2. Ensure you have a Python 3.8+ environment active.
 3. Install the required dependencies (including PyTorch and PennyLane) by running: `pip install -r requirements.txt`
-4. To train the classical baseline PINN, navigate to the src directory and execute: `python train_cpinn.py`
-5. To train the Quantum-Assisted PINN using the optimized cascade ansatz, execute: `python train_qapinn.py`
-6. To generate the Spectral Analysis and XAI Heatmaps, run: `python generate_xai_plots.py`
+4. Launch Jupyter Notebook or JupyterLab by running: `jupyter notebook`
+5. To train the classical baseline PINN, open and execute all cells in `src/c-PINN_burger.ipynb`.
+6. To train the Quantum-Assisted PINN, open and execute all cells in `src/QAPINN_burger.ipynb`.
+7. To generate the and XAI Heatmaps,  open and execute all cells in: `xai_visualizations/XAI_VISUALIZATION.ipynb`
